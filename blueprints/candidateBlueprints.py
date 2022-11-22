@@ -11,3 +11,8 @@ candidate_controller = CandidateController()
 def get_candidates():
     response = candidate_controller.index();
     return response, 200
+
+
+
+
+
