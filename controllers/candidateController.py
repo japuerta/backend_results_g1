@@ -19,8 +19,8 @@ class CandidateController:
             "id_": "abc123",
             "personal_id": "123456",
             "names": "alvaro",
-            "last name": "perez",
-            "political party": "liberal"
+            "last_name": "perez",
+            "political_party": "liberal"
         }
         candidate = Candidate(data)
         return [candidate.__dict__]
@@ -54,9 +54,10 @@ class CandidateController:
 
     def update(self, id_: str, candidate_: dict) -> dict:
         """
+        update candidate registration
         :param id_:
         :param candidate_:
-        :return: update candidate registration
+        :return:
         """
         print("update an candidate")
         data = candidate_
@@ -64,10 +65,11 @@ class CandidateController:
         candidate = Candidate(data)
         return candidate.__dict__
 
-    def delete(self, id_: str) -> dict:
+    def delete(self, id_: str) -> str:
         """
+        delete candidate registration
         :param id_:
-        :return: delete candidate registration
+        :return:
         """
         print("delete a candidate" + id_)
         return {"delete count": 1}
